@@ -1,0 +1,713 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* HEADER STYLES */
+.header {
+    position: fixed;
+    z-index: 100;
+    color: #fff;
+    padding: 12px 20px;
+    justify-content: space-between;
+    transition: background-color 0.3s, opacity 0.3s;
+    display: flex;
+    width: 100%;
+    
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+
+.head img{
+    max-height: 75px;
+    margin-right: 6px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.head h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    text-decoration: none;
+}
+.navbar {
+    display: flex;  
+    align-items: center;
+    position: absolute;
+    right: 1px;
+    top: 20px;
+    max-width: 100%;
+}
+
+.navbar li {
+    position: relative;
+  }
+  
+.navbar a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px 7px 15px;
+    margin-left: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #544d32;
+    white-space: nowrap;
+    transition: 0.3s;
+    border-radius: 50px;
+  }
+
+.navbar a:hover,
+.navbar li:hover > a {
+    background-color: #544d32;
+  }
+    
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+/* Hamburger Menu */
+
+.menu-toggle {
+    display: none; /* Initially hide the checkbox input */
+  }
+  
+  .menu-button {
+    display: none; /* Initially hide the menu button */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    margin-left: 20px; /* Adjust margin as needed */
+  }
+  
+  .bar1 {
+    width: 40px;
+    height: 6px; 
+    background: linear-gradient(90deg, #ffffff, #FFA4F0);
+    transition: 0.4s;
+    border-radius: 5px; /* Add rounded corners to the bars */
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .bar2 {
+    width: 40px;
+    height: 6px; 
+    background: linear-gradient(90deg, #ffffff, #FFA4F0);
+    transition: 0.4s;
+    border-radius: 5px; /* Add rounded corners to the bars */
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .bar3 {
+    width: 40px;
+    height: 6px; 
+    background: linear-gradient(90deg, #ffffff, #FFA4F0);
+    transition: 0.4s;
+    border-radius: 5px; /* Add rounded corners to the bars */
+    box-shadow: 0 5px 6px rgba(18, 17, 17, 0.2);
+  }
+  
+
+  
+  /* Show the menu button on screens with a maximum width of 768px */
+  @media (max-width: 768px) {
+    .header{
+        background-color: #F1619A;
+    }
+    
+    .menu{
+        flex-direction: column;
+        margin-right: 10px;
+        padding-right: 10rem;
+        z-index: 20;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+
+    .menu-button {
+    display: flex;
+    position: absolute;
+    position: absolute;
+    margin-right: 5rem;
+    top: 35px;
+    right: 20px; /* Adjust right margin as needed */
+  }
+
+  /* Hide the navigation menu by default on smaller screens */
+ 
+  .navbar li{
+    max-width: 100%;
+    flex-direction: column;
+    display: block;
+  }
+
+  /* Show the navigation menu when the checkbox is checked (hamburger menu is clicked) */
+  .menu-toggle:checked ~ .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 60px; /* Adjust this value as needed */
+    right: 20px; /* Adjust right margin as needed */
+    background-color: #845583;
+    z-index: 10;
+    flex-direction: column;
+  }
+
+  .menu-item {
+    margin-bottom: 10px; /* Adjust spacing between list items */
+    flex-direction: column;
+  }
+
+  .menu-item:last-child {
+    margin-bottom: 0; /* Remove margin from the last item */
+  }
+
+  .menu-item:hover .dropdown {
+    display: block; /* Show the dropdown when hovering over the menu item */
+  }
+
+  .menu-item .dropdown {
+    display: none; /* Hide the dropdown by default */
+    background-color: #001F3F;
+    z-index: 11;
+
+  }
+
+  .menu-item .dropdown li {
+    margin-right: 0; /* Reset margin for dropdown list items */
+  }
+
+  .menu-item .dropdown a {
+    padding: 10px 15px; /* Adjust padding as needed */
+    font-size: 18px;
+    border-radius: 0; /* Remove border-radius for dropdown items */
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* Style the links in the dropdown when hovered */
+  .menu-item .dropdown a:hover {
+    background-color: #DAA520;
+  }
+
+  }
+
+/* Dropdown Styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.dropdown li {
+    padding: 10px;
+}
+
+.dropdown li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show dropdown on hover */
+li:hover .dropdown {
+    display: block;
+}
+
+/* END OF HEADER STYLES */
+
+
+/* Hero Section Styles */
+.hero {
+    background-image: url(assets/bg-1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #544d32;
+    text-align: center;
+    padding: 8rem 0;
+    position: relative;
+}
+
+.hero h5 {
+    font-size: 6rem;
+    text-shadow: 2px 2px 8px #d9d9d9;
+    margin-top: 5%;
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 2s;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    text-shadow: 2px 2px 8px #d9d9d9;
+    margin-bottom: 2rem;
+    animation: fadeIn 2s;
+    color: #fff;
+}
+
+.hero .cta-button {
+    display: inline-block;
+    padding: 10px 60px;
+    background-color: #544d32; 
+    color: #ffffff;
+    margin-top: 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    animation: fadeIn 2s;
+}
+ 
+.hero .cta-button:hover {
+    background-color: #DAA520; 
+}
+
+
+/* Animedia Encyclopedia Styles */
+.animedia-encyclopedia {
+    padding: 6rem 0;
+    text-align: center;
+    background-image:  url(assets/bg-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.animedia-encyclopedia h2 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-top: -10px;
+    margin-bottom: 1.5rem;
+    margin-right: 35px;
+    text-align: right;
+    text-shadow: 2px 2px 8px #d9d9d9;
+
+}
+
+.animedia-encyclopedia h4 {
+    font-size: 2.5rem;
+    text-align: left;
+    margin-left: 180px;
+    color: #001F3F;
+    margin-bottom: 1.5rem;
+}
+
+.animedia-encyclopedia p {
+    font-size: 1.0rem;
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
+    text-align: center;
+}
+
+/* Style for the search container */
+form {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+/* Style for the search input */
+#search-input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+/* Style for the filter options dropdown */
+#filter-options {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+/* Style for the search button */
+#search-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #544d32;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#show-more-btn{
+    padding: 10px 20px;
+    background-color: #544d32;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px auto 100px;
+    display: none;
+}
+
+#search-results-desc {
+    float: left;
+    text-align: center;
+    width: 40%;
+    margin: 65px 20px 50px 250px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    display: none;
+}
+
+#animal-desc {
+    margin: 30px 20px 30px 110px;
+    width: 500px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#animal-desc ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#animal-desc li {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+#animal-desc li:before {
+    content: "•";
+    margin-right: 10px;
+    color: #007acc;
+}
+
+#animal-desc p {
+    font-size: 14px;
+    line-height: 1;
+    color: #333;
+}
+
+#animal-desc a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+#animal-desc a:hover {
+    text-decoration: underline;
+}
+
+
+#search-results-desc a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+#search-results-desc a:hover {
+    text-decoration: underline;
+}
+
+#search-results {
+    width: 80%;
+    margin: 60px auto 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+}
+
+#search-results img {
+    width: 100%;
+    height: 230px; 
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#video-container {
+    margin: 50px 300px 30px 0px;
+    float: right;
+    display: grid;
+    overflow: auto;
+    
+}
+
+/* Animedia Encyclopedia Media Query */
+@media screen and(max-width: 768px) {
+    .animedia-encyclopedia{
+        padding: 6rem 0;
+        text-align: center;
+        background-image:  url(assets/bg-2.png);
+        overflow: hidden; 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .animedia-encyclopedia h2 {
+        font-size: 2rem;
+        color: #845583;
+        margin-bottom: 1.5rem;
+    }
+
+    .animedia-encyclopedia h4 {
+        font-size: rem;
+        text-align: left;
+        margin-left: 210px;
+        color: #001F3F;
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+.developers {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.developers h2 {
+    font-size: 2.5rem;
+    color: #544d32;
+    margin-bottom: 1.5rem;
+}
+
+.developer {
+    display: inline-block;
+    margin: 2rem; 
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    width: 250px;
+    height: 250px;
+}
+
+.developer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.developer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.developer-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #544d32;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: left; 
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; 
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 2rem;
+    margin-bottom: 2rem; 
+}
+
+.footer-section:last-child {
+    margin-right: 0;
+}
+
+.footer-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.footer-section p,
+.footer-section a,
+.footer-section ul {
+    color: #ccc;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.quick-links {
+    flex: 1;
+}
+
+.quick-links h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.quick-links ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.quick-links ul li a:hover {
+    color: #fff;
+}
+
+.contact-form-section {
+    flex: 1;
+    padding-left: 2rem;
+    border-left: 1px solid #555;
+}
+
+.contact-form-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #544d32;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    color: #ccc;
+    text-align: center; 
+    font-size: 0.9rem; 
+    opacity: 0.8; 
+    transition: opacity 0.3s; 
+}
+
+.footer-bottom:hover {
+    opacity: 1; 
+}

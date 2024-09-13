@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Animedia</title>
+    <link rel="icon" href="assets/Animedia_logo.png" type="image/png">
+</head>
+<body>
+    <header id = "header" class="header d-flex align-items-center fixed-top">    
+        <div class = "container-fluid d-flex align-items-center" >
+            <a href="index.html" class="head d d-flex align align-items-center fixed-top">
+                <img src="assets/Animedia_logo.png" alt="#">
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-button">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+            </label>
+        <nav id = "navbar" class="navbar">
+            <ul class="menu">
+                <li><a href="#">Animal Kingdom</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <!-- End of HEADER -->
+
+
+    <section class="hero">
+        <h5>Get to know the<br>Animal Kingdom</h5>
+        <p>Spreading knowledge about Land,<br> Air and Water Animals.</p>
+        <a href="#organizations" class="cta-button">GET STARTED</a>
+    </section>
+
+
+    <section id="animedia_encyclopedia" class="animedia-encyclopedia">
+        <h2>Animal Kingdom</h2>
+        <form id="search-container">
+            <input type="text" id="search-input" placeholder="Search...">
+            <select id="filter-options">
+                <option value="water-type">Pets</option>
+                <option value="land-type">Mammals</option>
+                <option value="air-type">Birds</option>
+                <option value="water-type">Sea</option>
+                <option value="water-type">Ocean</option>
+            </select>
+            <button id="search-button">Search</button>
+        </form>
+
+    <div class="container">
+        <div id="video-container"></div>
+        <div id="search-results-desc">
+            <h3 id="animal-name"></h3>
+            <h3>Locations:</h3>
+            <h3 id="animal-loc"></h3>
+            <p id="animal-desc"></p>
+        </div>
+    </div>
+        
+        <div id="search-results"></div>
+        <button id="show-more-btn">Show More</button>
+    </section>
+
+
+    <section class="developers">
+        <h2>Meet Our Developers</h2>
+        <div class="developer">
+            <div class="developer-info">
+                <div class="developer-image">
+                    <img src="assets/.png" alt="Developer 1">
+                </div>
+                <h3>Valiant Ao-Miing</h3>
+                <p>Full Stack Developer</p>
+            </div>
+        </div>
+
+        <div class="developer">
+            <div class="developer-info">
+                <div class="developer-image">
+                    <img src="assets/.png" alt="Developer 2">
+                </div>
+                <h3>Ram Kenshin Ayan</h3>
+                <p>Full Stack Developer</p>
+            </div>
+        </div>
+
+        <div class="developer">
+            <div class="developer-info">
+                <div class="developer-image">
+                    <img src="assets/.png" alt="Developer 3">
+                </div>
+                <h3>Faye Natania Naval</h3>
+                <p>Full Stack Developer</p>
+            </div>
+        </div>
+        <br>
+        <div class="developer">
+            <div class="developer-info">
+                <div class="developer-image">
+                    <img src="assets/.jpg" alt="Developer 4">
+                </div>
+                <h3>Jhunisa Mae Montilla</h3>
+                <p>Full Stack Developer</p>
+            </div>
+        </div>
+
+        <div class="developer">
+            <div class="developer-info">
+                <div class="developer-image">
+                    <img src="assets/.JPEG" alt="Developer 5">
+                </div>
+                <h3>Mordecai Paragas</h3>
+                <p>Full Stack Developer</p>
+            </div>
+        </div>
+
+        <div class="developer">
+            <div class="developer-info">
+                <div class="developer-image">
+                    <img src="assets/Sajulla.JPEG" alt="Developer 6">
+                </div>
+                <h3>Aeika Sajulla</h3>
+                <p>Full Stack Developer</p>
+            </div>
+        </div>
+
+    </section>
+
+     
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section" id="about-us">
+                <h4>About Us</h4>
+                <p>Greetings from Animedia</p>
+                <br>
+                <p> Providing you with...
+                    <br> <br>
+                    </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="footer-section quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#jobs">Animal Kingdom</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-form-section" id="contact">
+                <h4>Contact Us</h4>
+                <form action="#" method="post" class="contact-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2023 Animedia. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
